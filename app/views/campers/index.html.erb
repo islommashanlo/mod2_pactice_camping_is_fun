@@ -1,7 +1,7 @@
 <h1>All The Campers</h1>
-
+<h2><%= button_to  "Create New Camper", new_camper_path, method: :get %></h2>
 <ul>
   <% @campers.each do |camper| %>
-    <li><%= camper.name %></li>
+    <li><%= link_to camper.name, camper_path(camper) %></li>
   <% end %>
 </ul>
